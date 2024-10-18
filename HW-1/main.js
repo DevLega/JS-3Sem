@@ -40,3 +40,7 @@ const userName = prompt("Введіть своє ім'я")
 console.log(userName);
 
 //
+
+const conf = confirm("Підтвердіть дію");
+
+console.log(conf)
