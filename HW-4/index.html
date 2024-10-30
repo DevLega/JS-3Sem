@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <style>
+        body {
+            background: rgb(63, 94, 251);
+            background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+        }
+
+        .navigation__button {
+            width: 200px;
+            height: 50px;
+
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: white;
+            font-family: "Afacad Flux", sans-serif;
+            font-weight: 500;
+            font-size: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .navigation__button:hover {
+            transform: scale(1.03);
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 10px;
+
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: white;
+            font-family: "Afacad Flux", sans-serif;
+            font-weight: 500;
+            font-size: 30px;
+            transition: transform 0.3s ease;
+        }
+    </style>
+
+    <a class="nav__link" href="../index.html"><button class="navigation__button">Back</button></a>
+
+    <h1>1 Task: EitherStrokesFull</h1>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <p id="textResults"></p>
+    <button id="checkText">Check inputs</button>
+
+    <br>
+    <h1>2 Task: SummaSmaller10</h1>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <p id="numResults"></p>
+    <button id="checkNumbers">Check nums</button>
+
+    <br>
+    <h1>3 Task: text include JavaScript</h1>
+    <input type="text" id="includeJava">
+    <p id="includeResults"></p>
+    <button id="checkInclude">Check JavaScript</button>
+
+    <br>
+    <h1>4 Task: numberNotBiggerOrSmaller</h1>
+    <input type="text" id="numberNotBiggerOrSmaller">
+    <p id="numberNotBiggerOrSmallerResults"></p>
+    <button id="numberNotBiggerOrSmallerCheck">Check numberNotBiggerOrSmaller 10 && 20</button>
+
+    <br>
+    <h1>4 Task: CorrectForms</h1>
+    <input type="text" id="FormName" placeholder="Ваше ім'я" required>
+    <input type="email" id="FormEmail" placeholder="Ваш email" required>
+    <input type="password" id="FormPassword" placeholder="Ваш пароль" required>
+    <p id="FormWrong"></p>
+    <button id="submitForm">Submit</button>
+</body>
+
+</html>
