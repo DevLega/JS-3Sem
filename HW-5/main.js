@@ -143,19 +143,15 @@ document.getElementById("checkColor").addEventListener("click", function () {
 });
 
 // 6 task
-let summaOperator = "+";
-
-document.querySelectorAll(".operator").forEach((button) => {
-  button.addEventListener("click", function () {
-    summaOperator = this.dataset.operator;
-    calculate();
-  });
-});
-
-function calculate() {
-  const NumbersResult = document.getElementById("NumbersResult");
-  const inputFirstNumber = Number(document.getElementById("inputFirstNumber").value);
-  const inputSecondNumber = Number(document.getElementById("inputSecondNumber").value);
+document.getElementById("summaOperator").addEventListener("click", function () {
+  const summaOperator = document.getElementById("summaOperator").textContent;
+  let NumbersResult = document.getElementById("NumbersResult");
+  let inputFirstNumber = Number(
+    document.getElementById("inputFirstNumber").value
+  );
+  let inputSecondNumber = Number(
+    document.getElementById("inputSecondNumber").value
+  );
   let result;
 
   switch (summaOperator) {
@@ -169,16 +165,15 @@ function calculate() {
       result = inputFirstNumber * inputSecondNumber;
       break;
     case "/":
-      if (inputSecondNumber === 0) {
-        result = "На нуль делить нельзя";
-      } else {
-        result = inputFirstNumber / inputSecondNumber;
+      if(inputSecondNumber === 0) {
+        result = "На нуль ділити не можна"
+        break;
       }
+      result = inputFirstNumber / inputSecondNumber;
       break;
     default:
-      result = "Неизвестная операция";
       break;
   }
 
-  NumbersResult.textContent = `Результат: ${result}`;
-}
+  NumbersResult.textContent = result;
+});
