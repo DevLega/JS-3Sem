@@ -143,37 +143,40 @@ document.getElementById("checkColor").addEventListener("click", function () {
 });
 
 // 6 task
-document.getElementById("summaOperator").addEventListener("click", function () {
-  const summaOperator = document.getElementById("summaOperator").textContent;
-  let NumbersResult = document.getElementById("NumbersResult");
-  let inputFirstNumber = Number(
-    document.getElementById("inputFirstNumber").value
-  );
-  let inputSecondNumber = Number(
-    document.getElementById("inputSecondNumber").value
-  );
-  let result;
+document.querySelectorAll(".operator").forEach(button => {
+  button.addEventListener("click", function () {
+    const operator = button.getAttribute("data-operator");
+    let NumbersResult = document.getElementById("NumbersResult");
+    let inputFirstNumber = Number(
+      document.getElementById("inputFirstNumber").value
+    );
+    let inputSecondNumber = Number(
+      document.getElementById("inputSecondNumber").value
+    );
+    let result;
 
-  switch (summaOperator) {
-    case "+":
-      result = inputFirstNumber + inputSecondNumber;
-      break;
-    case "-":
-      result = inputFirstNumber - inputSecondNumber;
-      break;
-    case "*":
-      result = inputFirstNumber * inputSecondNumber;
-      break;
-    case "/":
-      if(inputSecondNumber === 0) {
-        result = "На нуль ділити не можна"
+    switch (operator) {
+      case "+":
+        result = inputFirstNumber + inputSecondNumber;
         break;
-      }
-      result = inputFirstNumber / inputSecondNumber;
-      break;
-    default:
-      break;
-  }
+      case "-":
+        result = inputFirstNumber - inputSecondNumber;
+        break;
+      case "*":
+        result = inputFirstNumber * inputSecondNumber;
+        break;
+      case "/":
+        if (inputSecondNumber === 0) {
+          result = "На нуль ділити не можна";
+          break;
+        }
+        result = inputFirstNumber / inputSecondNumber;
+        break;
+      default:
+        result = "Невідома операція";
+        break;
+    }
 
-  NumbersResult.textContent = result;
+    NumbersResult.textContent = result;
+  });
 });
