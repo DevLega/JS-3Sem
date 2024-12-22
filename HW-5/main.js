@@ -147,12 +147,8 @@ document.querySelectorAll(".operator").forEach(button => {
   button.addEventListener("click", function () {
     const operator = button.getAttribute("data-operator");
     let NumbersResult = document.getElementById("NumbersResult");
-    let inputFirstNumber = Number(
-      document.getElementById("inputFirstNumber").value
-    );
-    let inputSecondNumber = Number(
-      document.getElementById("inputSecondNumber").value
-    );
+    let inputFirstNumber = Number(document.getElementById("inputFirstNumber").value);
+    let inputSecondNumber = Number(document.getElementById("inputSecondNumber").value);
     let result;
 
     switch (operator) {

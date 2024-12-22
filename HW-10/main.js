@@ -56,13 +56,15 @@ console.log(result);
 
 // TASK 6
 
+console.error("TASK 6");
+
 const calculateDiscountedPrice = (price, discount, callback) => {
 
   price = price * (1 - discount / 100)
-  callback(price)
+  callback(discount, price)
 
 };
 
-const showDiscountedPrice = (price) => console.log(price);
+const showDiscountedPrice = (discount, price) => console.log(`Ціна зі знижкою ${discount}% - ${price}$`);
 
 calculateDiscountedPrice(100, 10, showDiscountedPrice)
