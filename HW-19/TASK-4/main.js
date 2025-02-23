@@ -15,8 +15,10 @@ validInput.addEventListener('focusout', () => {
     const correctLength = validInput.getAttribute('data-length');
 
     if(length < correctLength) {
+        validInput.classList.remove("valid")
         validInput.classList.add("invalid")
     } else if(length >= correctLength) {
+        validInput.classList.remove("invalid")
         validInput.classList.add("valid")
     }
 })
